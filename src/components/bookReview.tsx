@@ -92,7 +92,7 @@ export default function BookReview(book: any) {
         />
         <Button
           type="submit"
-          className="rounded-full h-10 w-10 p-2 text-[25px] bg-green-500 hover:bg-yellow-600"
+          className="rounded-full h-10 w-10 p-2 text-[25px] bg-green-500 hover:bg-dark-600"
         >
           <FiSend />
         </Button>
