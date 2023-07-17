@@ -72,7 +72,7 @@ export default function BookDetails() {
   useEffect(() => {
     if (isSuccess && !isLoading) {
       navigate('/');
-      toast.success('You have logged in successfully.', {
+      toast.success('Login successful.', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
