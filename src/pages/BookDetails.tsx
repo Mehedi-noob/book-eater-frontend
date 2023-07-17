@@ -123,7 +123,7 @@ export default function BookDetails() {
     }
 
     if (readSoonSuccess && !isReadSoonLoading) {
-      toast.success('Added to read soon list', {
+      toast.success('Added to your followup list', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
