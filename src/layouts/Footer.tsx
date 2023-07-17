@@ -6,12 +6,10 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <div className="bg-[#728a7c] text-white p-20">
+    <div className="bg-black text-white p-20">
       <div className="flex justify-between">
         <div>
-          <Link to="/">
-            <img className="h-20 rounded-full" src={logo} alt="Logo" />
-          </Link>
+          <Link to="/">BOOK EATER</Link>
         </div>
         <div className="flex gap-20 ">
           <ul className="space-y-2 ">

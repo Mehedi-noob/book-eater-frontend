@@ -151,7 +151,7 @@ const EditBook = () => {
                   htmlFor="genre"
                   className="leading-7 text-sm text-gray-600"
                 >
-                  Genera
+                  GENRE
                 </label>
                 <input
                   type="text"

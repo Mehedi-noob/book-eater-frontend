@@ -17,21 +17,29 @@ export default function Home() {
           <div className="flex justify-between items-center h-[calc(100vh-80px)] max-w-7xl mx-auto ">
             <div>
               <h1 className="text-6xl font-black text-primary mb-2">
-                The secret
+                Eat
                 <br />
-                world of Books
+                The Knowledge of The Universe
               </h1>
               <p className="text-secondary font-semibold text-xl">
-                Invent yourself in a different way.
+                Know and Gain POwer.
               </p>
               <div className="text-primary font-semibold mt-10">
-                <p>Explore 50,000+ books for free.</p>
-                <p>Read from anywhre in the world.</p>
+                <p>Explore any knowledge till date.</p>
+                <p>Read online and be updated.</p>
               </div>
               <button>Notify</button>
             </div>
-            <div className="relative w-[40%]  rounded-2xl bg-[#728a7c] border-[6px] border-[#728a7c]">
-              <img className="w-full rounded-xl  " src={banner} alt="" />
+            <div className="flex-col">
+              <div className="relative w-[40%]  rounded-2xl bg-[#728a7c] border-[6px] border-[#728a7c]">
+                <img className="w-full rounded-xl  " src={banner} alt="" />
+              </div>
+              <div className="relative w-[40%]  rounded-2xl bg-[#728a7c] border-[6px] border-[#728a7c]">
+                <img className="w-full rounded-xl  " src={banner} alt="" />
+              </div>
+              <div className="relative w-[40%]  rounded-2xl bg-[#728a7c] border-[6px] border-[#728a7c]">
+                <img className="w-full rounded-xl  " src={banner} alt="" />
+              </div>
             </div>
           </div>
           <Book data={data?.data ?? []} />
