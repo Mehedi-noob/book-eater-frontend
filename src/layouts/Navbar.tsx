@@ -4,15 +4,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar';
 import { Button } from '../components/ui/button';
 import { DropdownMenuSeparator } from '../components/ui/dropdown-menu';
 import { DropdownMenuLabel } from '../components/ui/dropdown-menu';
-import logo from '@/assets/images/logo.png';
 import {
   DropdownMenuItem,
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
 } from '../components/ui/dropdown-menu';
-import { BsBookmarkStar } from 'react-icons/bs';
-import { AiOutlineFolderAdd } from 'react-icons/ai';
 import {
   getFromLocalStorage,
   removeFromLocalStorage,
