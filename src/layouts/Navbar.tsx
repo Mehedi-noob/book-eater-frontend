@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <nav className="w-full h-24 fixed top backdrop-blur-lg z-10">
       <div className="h-full w-full bg-white/60">
-        <div className="flex items-center justify-between w-full md:max-w-7xl h-full mx-auto ">
+        <div className="flex items-center justify-start w-full md:max-w-7xl h-full mx-auto ">
           <div>
             <Link className="text-red-950	font-bold" to="/">
               BOOK EATER
