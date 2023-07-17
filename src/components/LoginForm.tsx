@@ -46,7 +46,7 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
       } else {
         navigate('/');
       }
-      toast.success('You have logged in successfully.', {
+      toast.success('Login successful.', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
