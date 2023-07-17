@@ -60,7 +60,7 @@ export function SignupForm({ className, ...props }: UserAuthFormProps) {
   React.useEffect(() => {
     if (isSuccess && !isLoading) {
       navigate('/');
-      toast.success('You have signed up successfully.', {
+      toast.success('SignUp Successful.', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
