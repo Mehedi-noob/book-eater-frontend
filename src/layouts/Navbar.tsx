@@ -63,7 +63,7 @@ export default function Navbar() {
                 </>
               )}
 
-              <li className="ml-5">
+              <li className="ml-5 place-self-end">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="outline-none">
                     <Avatar>
