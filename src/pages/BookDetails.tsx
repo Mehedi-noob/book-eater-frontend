@@ -97,7 +97,7 @@ export default function BookDetails() {
     }
 
     if (wishlistSuccess && !isWishlistLoading) {
-      toast.success('Added to wishlist', {
+      toast.success('Added to you favourites', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
