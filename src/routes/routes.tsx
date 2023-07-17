@@ -3,10 +3,14 @@ import App from '@/App';
 import Login from '@/pages/Login';
 import NotFound from '@/pages/NotFound';
 import Home from '@/pages/Home';
-import Products from '@/pages/Products';
-import Checkout from '@/pages/Checkout';
 import Signup from '@/pages/Signup';
-import ProductDetails from '@/pages/ProductDetails';
+import Books from '@/pages/Books';
+import BookDetails from '@/pages/BookDetails';
+import AddNewBook from '@/pages/AddNewBook';
+import EditBook from '@/pages/EditBook';
+import Wishlist from '@/pages/Wishlist';
+import ReadSoon from '@/pages/ReadSoon';
+import PrivateRoute from './privateRoute';
 
 const routes = createBrowserRouter([
   {
@@ -18,16 +22,44 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/products',
-        element: <Products />,
+        path: '/books',
+        element: <Books />,
       },
       {
-        path: '/product-details/:id',
-        element: <ProductDetails />,
+        path: '/wishlist',
+        element: (
+          <PrivateRoute>
+            <Wishlist />
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/checkout',
-        element: <Checkout />,
+        path: '/read-soon',
+        element: (
+          <PrivateRoute>
+            <ReadSoon />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/book-details/:id',
+        element: <BookDetails />,
+      },
+      {
+        path: '/edit-book/:id',
+        element: (
+          <PrivateRoute>
+            <EditBook />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/add-new-book',
+        element: (
+          <PrivateRoute>
+            <AddNewBook />
+          </PrivateRoute>
+        ),
       },
     ],
   },

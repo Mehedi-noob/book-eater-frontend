@@ -1,20 +1,22 @@
-import React from 'react';
-import logo from '@/assets/images/technet-logo-white.png';
+import logo from '@/assets/images/logo.png';
 import { RiFacebookBoxFill, RiInstagramLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
 
   return (
-    <div className="bg-[#242630] text-secondary p-20">
+    <div className="bg-[#728a7c] text-white p-20">
       <div className="flex justify-between">
         <div>
-          <img className="h-10" src={logo} alt="Logo" />
+          <Link to="/">
+            <img className="h-20 rounded-full" src={logo} alt="Logo" />
+          </Link>
         </div>
-        <div className="flex gap-20">
-          <ul className="space-y-2">
+        <div className="flex gap-20 ">
+          <ul className="space-y-2 ">
             <li>Upcoming</li>
-            <li>Shipping</li>
+            <li>Updates</li>
             <li>How it works</li>
           </ul>
           <ul className="space-y-2">
@@ -22,7 +24,7 @@ export default function Footer() {
             <li>Careers</li>
           </ul>
           <ul className="space-y-2">
-            <li>List your gear</li>
+            <li>List your books</li>
             <li>Contact team</li>
           </ul>
         </div>
@@ -34,7 +36,7 @@ export default function Footer() {
       <div className="flex w-full mt-20 gap-5">
         <p>Privacy Policy</p>
         <p>Terms & Condition</p>
-        <p className="ml-auto"> &#169; TechNet {year}</p>
+        <p className="ml-auto"> &#169; BookEater {year}</p>
       </div>
     </div>
   );

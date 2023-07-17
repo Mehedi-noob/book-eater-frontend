@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 'use client';
 
 import * as React from 'react';
@@ -8,6 +9,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useLoginMutation } from '@/redux/features/user/userApi';
+import { toast } from 'react-toastify';
+import { saveToLocalStorage } from '../utils/localstorage.ts';
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>;
 
@@ -17,6 +22,12 @@ interface LoginFormInputs {
 }
 
 export function LoginForm({ className, ...props }: UserAuthFormProps) {
+  const navigate = useNavigate();
+
+  // API call
+  const [login, { data, isError, isLoading, isSuccess, error }] =
+    useLoginMutation();
+
   const {
     register,
     handleSubmit,
@@ -24,8 +35,45 @@ export function LoginForm({ className, ...props }: UserAuthFormProps) {
   } = useForm<LoginFormInputs>();
 
   const onSubmit = (data: LoginFormInputs) => {
-    console.log(data);
+    login({ email: data.email, password: data.password });
   };
+
+  const { state } = useLocation();
+  React.useEffect(() => {
+    if (isSuccess && !isLoading) {
+      if (state?.path) {
+        navigate(state?.path);
+      } else {
+        navigate('/');
+      }
+      toast.success('You have logged in successfully.', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+      saveToLocalStorage('access-token', data?.data?.accessToken);
+      saveToLocalStorage('user-info', JSON.stringify(data?.data?.userData));
+    }
+    if (isError === true && error) {
+      if ('data' in error) {
+        toast.error(`${(error as any).data!.message}`, {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'light',
+        });
+      }
+    }
+  }, [isLoading, navigate, state, isSuccess, error, isError, data]);
 
   return (
     <div className={cn('grid gap-6', className)} {...props}>
