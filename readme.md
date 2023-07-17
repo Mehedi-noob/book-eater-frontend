@@ -1,9 +1,9 @@
-# Hogwarts Bookshelf
+# BOOK EATER
 
 ## Live Link:
 
-- Frontend:
-- Backend:
+- Frontend: https://fascinating-tapioca-a8caa0.netlify.app/
+- Backend: https://book-eater-new.vercel.app/
 
 ## Github Repositories
 
