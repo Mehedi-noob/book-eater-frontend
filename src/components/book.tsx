@@ -34,7 +34,7 @@ const Book = ({ data }: { data: IBook[] }) => {
 
   useEffect(() => {
     if (isSuccess && !isLoading) {
-      toast.success('Finished reading status updated successfully', {
+      toast.success('You have successfully completed the book', {
         position: 'top-right',
         autoClose: 3000,
         hideProgressBar: false,
