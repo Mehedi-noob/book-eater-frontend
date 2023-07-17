@@ -353,13 +353,13 @@ export default function BookDetails() {
                 {book?.data?.creator === user?.id && (
                   <div className="flex">
                     <Link to={`/edit-book/${book?.data?._id}`}>
-                      <button className="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded mr-3">
+                      <button className="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded-full mr-3">
                         Edit
                       </button>
                     </Link>
 
                     <AlertDialog>
-                      <AlertDialogTrigger className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">
+                      <AlertDialogTrigger className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded-full">
                         Delete
                       </AlertDialogTrigger>
                       <AlertDialogContent>
@@ -387,14 +387,14 @@ export default function BookDetails() {
 
                 <button
                   onClick={handleAddToReadSoon}
-                  className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
+                  className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded-full"
                 >
                   Read Soon
                 </button>
                 <button
                   onClick={handleAddToWishlist}
                   className={`rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4 ${
-                    alreadyAddedToWishlist && 'bg-pink-500 text-white'
+                    alreadyAddedToWishlist && 'bg-blue-500 text-white'
                   }`}
                 >
                   <svg

@@ -88,11 +88,11 @@ export default function BookReview(book: any) {
           className="border-2"
           onChange={handleChange}
           value={inputValue}
-          placeholder="write your review here"
+          placeholder="Give your Valuable Review"
         />
         <Button
           type="submit"
-          className="rounded-full h-10 w-10 p-2 text-[25px] bg-yellow-500 hover:bg-yellow-600"
+          className="rounded-full h-10 w-10 p-2 text-[25px] bg-green-500 hover:bg-yellow-600"
         >
           <FiSend />
         </Button>
